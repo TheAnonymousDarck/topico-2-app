@@ -1,61 +1,49 @@
 import { defineStore } from 'pinia'
-import type { Catwuda, Cliente, Actor, Transformacion, Welstanchaung, Duenio, Ambiente } from '@/interfaces/Index'
+import type { Ishikawa, Causa, Efecto, Branch } from '@/interfaces/Index'
 
-interface CatwdaState {
-  catwda: Catwuda | undefined;
-  clientes: Cliente[]
-  actores:Actor[]
-  transformacion: Transformacion[]
-  welstanchaung: Welstanchaung[]
-  duenios: Duenio[]
-  ambientes: Ambiente[]
-  isCatwdaComplete: boolean,
+interface IshikawaState {
+  ishikawa: Ishikawa | undefined;
+  branch: Branch;
+  causa: Causa;
+  causas: Causa[];
+  efectos: Efecto[];
+  isIshikawaComplete: boolean,
 }
 
-export const useFodaStore = defineStore('Catwda', {
-  state: (): CatwdaState => ({
-    catwda: { clientes: [], actores: [], transformacion: [], welstanchaung: [], duenios: [], ambientes: [] },
-    clientes: <Cliente[]>[],
-    actores:<Actor[]>[],
-    transformacion: <Transformacion[]>[],
-    welstanchaung: <Welstanchaung[]>[],
-    duenios:<Duenio[]>[],
-    ambientes: <Ambiente[]>[],
-    isCatwdaComplete: false,
+export const useIshikawaStore = defineStore('Ishikawa', {
+  state: (): IshikawaState => ({
+    ishikawa: { branches: <Branch[]>[] },
+    branch: { causa: <Causa>'', efectos: <Efecto[]>[] },
+    causa: <Causa>'',
+    causas: <Causa[]>[],
+    efectos: <Efecto[]>[],
+    isIshikawaComplete: false,
   }),
   getters: {
-    getCatwda: (state) => state.catwda,
-    getIsCatwdaComplete: (state) => state.isCatwdaComplete,
+    getIshikawa: (state): Ishikawa | undefined => state.ishikawa,
+    getIsIshikawaComplete: (state) => state.isIshikawaComplete,
   },
   actions: {
     clearState() {
-      this.catwda = { clientes: [], actores: [], transformacion: [], welstanchaung: [], duenios: [], ambientes: [] };
-      this.clientes = <Cliente[]>[];
-      this.actores = <Actor[]>[];
-      this.transformacion = <Transformacion[]>[];
-      this.welstanchaung = <Welstanchaung[]>[];
-      this.duenios = <Duenio[]>[];
-      this.ambientes = <Ambiente[]>[];
-      this.isCatwdaComplete = false;
+      this.ishikawa = { branches: <Branch[]>[] };
+      this.branch = { causa: <Causa>'', efectos: <Efecto[]>[] };
+      this.causa = <Causa>'';
+      this.efectos = <Efecto[]>[];
+      this.isIshikawaComplete = false;
     },
-    saveC(clientes: Cliente[]){
-      this.catwda!.clientes = clientes;
+    saveBranch(causa: Causa, efectos: Efecto[]){
+      this.branch.causa = causa;
+      this.branch.efectos = efectos;
     },
-    saveA(actores: Actor[]){
-      this.catwda!.actores = actores;
+    addBranch(causa: Causa, efectos: Efecto[]){
+      this.ishikawa?.branches.push({ causa, efectos });
+      },
+    saveCausas(causas: Causa[]){
+      console.log(causas);
     },
-    saveT(transformacion: Transformacion[]){
-      this.catwda!.transformacion = transformacion;
-    },
-    saveW(welstanchaung: Welstanchaung[]){
-      this.catwda!.welstanchaung = welstanchaung;
-    },
-    saveD(duenios: Duenio[]){
-      this.catwda!.duenios = duenios;
-    },
-    saveAFinal(ambientes: Ambiente[]){
-      this.catwda!.ambientes = ambientes;
-    },
+    saveEfectos(efectos: Efecto[]) {
+      console.log(efectos);
+    }
   },
   persist: true,
 })

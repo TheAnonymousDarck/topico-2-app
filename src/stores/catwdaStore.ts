@@ -1,45 +1,60 @@
 import { defineStore } from 'pinia'
-import type { Foda, Fortaleza, Oportunidad, Debilidad, Amenaza, } from '@/interfaces/Index'
+import type { Catwuda, Cliente, Actor, Transformacion, Welstanchaung, Duenio, Ambiente } from '@/interfaces/Index'
 
-interface FodaState {
-  foda: Foda | undefined,
-  fortalezas: Fortaleza[],
-  oportunidades: Oportunidad[],
-  debilidades: Debilidad[],
-  amenazas: Amenaza[],
-  isFodaComplete: boolean,
+interface CatwdaState {
+  catwda: Catwuda | undefined;
+  clientes: Cliente[]
+  actores:Actor[]
+  transformacion: Transformacion[]
+  welstanchaung: Welstanchaung[]
+  duenios: Duenio[]
+  ambientes: Ambiente[]
+  isCatwdaComplete: boolean,
 }
 
-export const useFodaStore = defineStore('Foda', {
-  state: (): FodaState => ({
-    foda: { fortalezas: [], oportunidades: [], debilidades: [], amenazas: [] },
-    fortalezas: <Fortaleza[]>[],
-    oportunidades: <Oportunidad[]>[],
-    debilidades: <Debilidad[]>[],
-    amenazas: <Amenaza[]>[],
-    isFodaComplete: false,
+export const useCatwdaStore = defineStore('Catwda', {
+  state: (): CatwdaState => ({
+    catwda: { clientes: [], actores: [], transformacion: [], welstanchaung: [], duenios: [], ambientes: [] },
+    clientes: <Cliente[]>[],
+    actores:<Actor[]>[],
+    transformacion: <Transformacion[]>[],
+    welstanchaung: <Welstanchaung[]>[],
+    duenios:<Duenio[]>[],
+    ambientes: <Ambiente[]>[],
+    isCatwdaComplete: false,
   }),
-  getters: { },
+  getters: {
+    getCatwda: (state) => state.catwda,
+    getIsCatwdaComplete: (state): boolean => state.isCatwdaComplete,
+  },
   actions: {
     clearState() {
-      this.foda = {fortalezas: [], oportunidades: [], debilidades: [], amenazas: []};
-      this.fortalezas = <Fortaleza[]>[];
-      this.oportunidades = <Oportunidad[]>[];
-      this.debilidades = <Debilidad[]>[];
-      this.amenazas = <Amenaza[]>[];
-      this.isFodaComplete = false;
+      this.catwda = { clientes: [], actores: [], transformacion: [], welstanchaung: [], duenios: [], ambientes: [] };
+      this.clientes = <Cliente[]>[];
+      this.actores = <Actor[]>[];
+      this.transformacion = <Transformacion[]>[];
+      this.welstanchaung = <Welstanchaung[]>[];
+      this.duenios = <Duenio[]>[];
+      this.ambientes = <Ambiente[]>[];
+      this.isCatwdaComplete = false;
     },
-    saveF(fortalezas: Fortaleza[]){
-      this.foda!.fortalezas = fortalezas;
+    saveC(clientes: Cliente[]){
+      this.catwda!.clientes = clientes;
     },
-    saveO(oportunidades: Oportunidad[]){
-      this.foda!.oportunidades = oportunidades;
+    saveA(actores: Actor[]){
+      this.catwda!.actores = actores;
     },
-    saveD(debilidades: Debilidad[]){
-      this.foda!.debilidades = debilidades;
+    saveT(transformacion: Transformacion[]){
+      this.catwda!.transformacion = transformacion;
     },
-    saveA(amenazas: Amenaza[]){
-      this.foda!.amenazas = amenazas;
+    saveW(welstanchaung: Welstanchaung[]){
+      this.catwda!.welstanchaung = welstanchaung;
+    },
+    saveD(duenios: Duenio[]){
+      this.catwda!.duenios = duenios;
+    },
+    saveAFinal(ambientes: Ambiente[]){
+      this.catwda!.ambientes = ambientes;
     },
   },
   persist: true,

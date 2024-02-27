@@ -18,7 +18,7 @@ import CardIndex from '@/components/CardIndex.vue';
         routeName="evaluacion" />
 
       <CardIndex title="Diagramas" color="bg-emerald-500" imgSrc="https://cdn-icons-png.flaticon.com/512/2145/2145569.png"
-        routeName="first-partial-diagrams" />
+        routeName="diagramas-index" />
 
     </div>
   </main>

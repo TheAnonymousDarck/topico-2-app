@@ -39,3 +39,22 @@ Realizar programa sobre todos estos diagramas en conjunto lo del primer parcial.
 ## 13/02/2024
 
 Martes 20 Entrega
+
+## 20/02/2024
+
+LEER PRIMEROS 3 CAPITULOS
+
+Fuera de Serie
+
+## Epilogo Notas fuera de serie
+
+- Se enfatiza la importancia del contexto y las oportunidades en el éxito individual
+
+- la idea de que el éxito se debe al talento nato o al trabajo duro
+
+- Destaca cómo factores como la cultura, el momento histórico y las circunstancias externas pueden influir significativamente en el éxito de una persona.
+
+- Sugiere que comprender estas influencias puede ayudar a crear un mundo más equitativo y ofrecer oportunidades justas para todos.
+
+Conclusiones:
+El libro cierra reforzando la idea central de que el éxito es más complejo de lo que parece y que debemos considerar una amplia gama de factores para entenderlo completamente.

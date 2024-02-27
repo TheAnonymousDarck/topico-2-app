@@ -3,7 +3,6 @@ import { computed, ref } from 'vue'
 import { FwbButton, FwbTextarea, FwbModal } from 'flowbite-vue'
 import type { Hat } from '@/interfaces/Index'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { useSixHatsStore } from '@/stores/sixHatsStore'
 
 interface dataColorContent{
   color: string;
@@ -13,28 +12,26 @@ const props = defineProps<{
   hat: Hat,
 }>();
 
-const isShowModal = ref(false)
+const content = computed(
+  () => dataColor.find(item => item.color === props.hat.color)
+);
+const color = computed( () => {
+  if (props.hat.color === 'White') {
+    return 'gray';
+  }
+  if (props.hat.color === 'Black'){
+    return 'dark';
+  }
+  return props.hat.color.toLowerCase();
+});
 
+const isShowModal = ref(false)
 function closeModal () {
   isShowModal.value = false
 }
 function showModal () {
   isShowModal.value = true
 }
-
-const color = computed( () => {
-  if (props.hat.color === 'White') {
-    return 'gray';
-  }
-
-  if (props.hat.color === 'Black'){
-    return 'dark';
-  }
-
-  return props.hat.color.toLowerCase();
-});
-
-
 const dataColor: dataColorContent[] = [
   {
     color:    'White',
@@ -61,18 +58,6 @@ const dataColor: dataColorContent[] = [
     content:'Es el color de la vegetación, nos transmite crecimiento, generación, energía, por eso se asocia al pensamiento creativo. Este sombrero se utilizará para generar ideas a las posibles problemáticas o necesidades planteadas y en su uso tienen cabida muchas técnicas creativas como el brainstorming o las analogías.'
   },
 ];
-
-const content = computed(
-  () => dataColor.find(item => item.color === props.hat.color)
-  );
-
-// const {hat} = storeToRefs(useSixHatsStore());
-
-// const data = ref<string | string[]>(['']);
-
-const save = () => {
-  useSixHatsStore().saveHat(props.hat);
-};
 </script>
 
 <template>
@@ -115,19 +100,9 @@ const save = () => {
         :rows="6"
         custom
         :label="props.hat.role"
+        readonly
         placeholder="Separa cada idea con un enter"
-
       >
-        <template #footer>
-          <div class="flex items-center justify-center">
-            <FwbButton :color='color' outline v-if="color !== 'gray'" @click="save">
-              Guardar
-            </FwbButton>
-            <FwbButton color="purple"  outline v-if="color === 'gray'">
-              Guardar
-            </FwbButton>
-          </div>
-        </template>
       </FwbTextarea>
     </div>
 </template>

@@ -1,37 +1,33 @@
 import { defineStore } from 'pinia'
-import type { Ishikawa, Causa, Efecto } from '@/interfaces/Index'
+import type { SixHats, Hat } from '@/interfaces/Index'
 
-interface IshikawaState {
-  ishikawa: Ishikawa | undefined;
-  causas: Causa[];
-  efectos: Efecto[];
-  isIshikawaComplete: boolean,
+interface SixHatsState {
+  sixHats: SixHats | undefined;
+  hat: Hat | undefined;
+  isSixHatsComplete: boolean;
 }
 
-export const useIshikawaStore = defineStore('Ishikawa', {
-  state: (): IshikawaState => ({
-    ishikawa: { causas: [], efectos: [] },
-    causas: <Causa[]>[],
-    efectos: <Efecto[]>[],
-    isIshikawaComplete: false,
+export const useSixHatsStore = defineStore('SixHats', {
+  state: (): SixHatsState => ({
+    sixHats: { hats:[] },
+    hat: undefined,
+    isSixHatsComplete: true,
   }),
   getters: {
-    getIshikawa: (state) => state.ishikawa,
-    getIsIshikawaComplete: (state) => state.isIshikawaComplete,
+    getSixHats: (state) => state.sixHats,
+    getIsSixHatsComplete: (state) => state.isSixHatsComplete,
   },
   actions: {
     clearState() {
-      this.ishikawa = { causas: [], efectos: [] };
-      this.causas = <Causa[]>[];
-      this.efectos = <Efecto[]>[];
-      this.isIshikawaComplete = false;
+      this.sixHats = { hats:[] };
+      this.isSixHatsComplete = false;
     },
-    saveCausas(causas: Causa[]){
-      this.ishikawa!.causas = causas;
+    saveHat(hat: Hat){
+      this.sixHats?.hats.push(hat);
     },
-    saveEfectos(efectos: Efecto[]){
-      this.ishikawa!.efectos = efectos;
-    },
+    // saveEfectos(efectos: Efecto[]){
+    //   this.ishikawa!.efectos = efectos;
+    // },
   },
   persist: true,
 })

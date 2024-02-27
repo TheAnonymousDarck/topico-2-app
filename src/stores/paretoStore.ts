@@ -1,36 +1,66 @@
 import { defineStore } from 'pinia'
-import type { Ishikawa, Causa, Efecto } from '@/interfaces/Index'
+import type { Pareto, Fr, FrAcum, } from '@/interfaces/Index'
 
-interface IshikawaState {
-  ishikawa: Ishikawa | undefined;
-  causas: Causa[];
-  efectos: Efecto[];
-  isIshikawaComplete: boolean,
+interface ParetoState {
+  pareto: Pareto | undefined;
+  fr: Fr;
+  frAcum: FrAcum;
+  options: number[];
+  qy1: number,
+  qy2: number,
+  qy3: number,
+  qy4: number,
+  qy5: number,
+  isParetoComplete: boolean,
 }
 
-export const useIshikawaStore = defineStore('Ishikawa', {
-  state: (): IshikawaState => ({
-    ishikawa: { causas: [], efectos: [] },
-    causas: <Causa[]>[],
-    efectos: <Efecto[]>[],
-    isIshikawaComplete: false,
+export const useParetoStore = defineStore('Pareto', {
+  state: (): ParetoState => ({
+    pareto: { fr: '', frAcum: '', options: [] },
+    fr: <Fr>'',
+    frAcum: <FrAcum>'',
+    options: <number[]>[],
+    qy1: 80,
+    qy2: 90,
+    qy3: 23,
+    qy4: 50,
+    qy5: 56,
+    isParetoComplete: false,
   }),
   getters: {
-    getIshikawa: (state) => state.ishikawa,
-    getIsIshikawaComplete: (state) => state.isIshikawaComplete,
+    getPareto: (state) => state.pareto,
+    getIsParetoComplete: (state) => state.isParetoComplete,
   },
   actions: {
     clearState() {
-      this.ishikawa = { causas: [], efectos: [] };
-      this.causas = <Causa[]>[];
-      this.efectos = <Efecto[]>[];
-      this.isIshikawaComplete = false;
+      this.pareto = { fr: '', frAcum: '', options: [] };
+      this.fr = <Fr>'';
+      this.frAcum = <FrAcum>'';
+      this.isParetoComplete = false;
     },
-    saveCausas(causas: Causa[]){
-      this.ishikawa!.causas = causas;
+    saveFrs(fr: Fr){
+      this.pareto!.fr = fr;
     },
-    saveEfectos(efectos: Efecto[]){
-      this.ishikawa!.efectos = efectos;
+    saveFrAcums(frAcum: FrAcum){
+      this.pareto!.frAcum = frAcum;
+    },
+    saveOptions(options: number[]){
+      this.pareto!.options = options;
+    },
+    saveQ1(q: number){
+      this.qy1 = q;
+    },
+    saveQ2(q: number){
+      this.qy2 = q;
+    },
+    saveQ3(q: number){
+      this.qy3 = q;
+    },
+    saveQ4(q: number){
+      this.qy4 = q;
+    },
+    saveQ5(q: number){
+      this.qy5 = q;
     },
   },
   persist: true,

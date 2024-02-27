@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  $END$
+Este es el Form de Seis Sombreros
 </template>
 
 <style scoped>

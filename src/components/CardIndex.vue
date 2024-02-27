@@ -48,6 +48,6 @@ defineProps({
 </template>
 <style scoped>
 .cardIndex {
-    @apply relative flex-shrink-0 max-w-xs m-6 overflow-hidden rounded-lg shadow-lg;
+    @apply relative flex-shrink-0 max-w-xs m-6 overflow-hidden rounded-lg shadow-lg transition ease-in-out delay-150 duration-300 hover:-translate-y-1 hover:scale-110;
 }
 </style>

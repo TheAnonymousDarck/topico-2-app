@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { loadLayoutMiddleware } from '@/router/middlewares/loadLayoutMiddleware';
+// import { loadLayoutMiddleware } from '@/router/middlewares/loadLayoutMiddleware';
 // loadLayoutMiddleware
 import { routes } from './routes'
 

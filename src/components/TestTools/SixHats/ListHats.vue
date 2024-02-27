@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  $END$
+se listan los sombreros
 </template>
 
 <style scoped>

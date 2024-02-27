@@ -13,8 +13,8 @@
             <span class="inline md:block">
               Tópico II
             </span>
-            <span class="relative mt-2 bg-clip-text text-[#201515] md:inline-block">
-
+            <span class="relative font-semibold mt-2 text-5xl bg-clip-text text-[#201515] md:inline-block">
+              Sistemas informaticos para la alta dirección
             </span>
           </h1>
         </div>

@@ -13,6 +13,8 @@ import IshikawaViewVue from "@/views/FirstPartial/ToolsDesitions/IshikawaView.vu
 import CatwdaViewVue from "@/views/FirstPartial/ToolsDesitions/CatwdaView.vue";
 import ParetoViewVue from "@/views/FirstPartial/ToolsDesitions/ParetoView.vue";
 import SixHatsViewVue from "@/views/FirstPartial/ToolsDesitions/SixHatsView.vue";
+import IndexToolsViewVue from "@/views/FirstPartial/ToolsDesitions/IndexToolsView.vue";
+import TestToolsViewVue from "@/views/FirstPartial/ToolsDesitions/TestToolsView.vue";
 
 export const routes: RouteRecordRaw[] = [
     {
@@ -52,6 +54,16 @@ export const routes: RouteRecordRaw[] = [
         name: 'first-partial-diagrams',
         component: DiagramsLayoutVue,
         children: [
+            {
+                path: '',
+                name: 'diagramas-index',
+                component: IndexToolsViewVue
+            },
+            {
+                path: '/test-tools',
+                name: 'test-tools',
+                component: TestToolsViewVue
+            },
             {
                 path: '/foda',
                 name: 'foda',
