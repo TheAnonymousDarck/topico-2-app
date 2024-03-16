@@ -23,15 +23,15 @@
         <div class="max-w-lg px-4 pb-24 mx-auto text-left md:max-w-none md:text-center">
           <div class='py-4 space-x-4 text-center '>
 
-            <div class="">
+            <div class="space-x-2">
               <RouterLink :to="{ name: 'first-partial-index' }"
                 class="backdrop-blur-sm transition duration-500 ease-in-out bg-indigo-500 border border-[#E2E8F0] translate-y-1 text-white hover:bg-indigo-200 text-lg font-semibold py-3 px-6 rounded-3xl inline-flex items-center">
                 <span> Primer parcial</span>
               </RouterLink>
-              <!-- <RouterLink :to="{ name: 'second-partial-index' }" disabled
+              <RouterLink :to="{ name: 'second-partial-index' }" disabled
                 class="backdrop-blur-sm transition duration-500 ease-in-out bg-indigo-500 border border-[#E2E8F0] translate-y-1 text-white hover:bg-indigo-200 text-lg font-semibold py-3 px-6 rounded-3xl inline-flex items-center">
                 <span> Segundo parcial</span>
-              </RouterLink> -->
+              </RouterLink>
               <RouterLink :to="{ name: 'author' }"
                 class="ml-2 backdrop-blur-sm transition duration-500 ease-in-out bg-indigo-500 border border-[#E2E8F0] translate-y-1 text-white hover:bg-indigo-200 text-lg font-semibold py-3 px-6 rounded-3xl inline-flex items-center">
                 <span> Autor </span>

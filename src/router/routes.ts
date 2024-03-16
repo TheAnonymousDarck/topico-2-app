@@ -15,6 +15,8 @@ import ParetoViewVue from "@/views/FirstPartial/ToolsDesitions/ParetoView.vue";
 import SixHatsViewVue from "@/views/FirstPartial/ToolsDesitions/SixHatsView.vue";
 import IndexToolsViewVue from "@/views/FirstPartial/ToolsDesitions/IndexToolsView.vue";
 import TestToolsViewVue from "@/views/FirstPartial/ToolsDesitions/TestToolsView.vue";
+import OutliersIndexVue from "@/views/SecondPartial/FueraSerie/OutliersIndex.vue";
+import GigantsView from "@/views/SecondPartial/GigantsMX/GigantsView.vue";
 
 export const routes: RouteRecordRaw[] = [
     {
@@ -100,7 +102,18 @@ export const routes: RouteRecordRaw[] = [
         path: '/second-partial',
         name: 'second-partial',
         component: GuestLayoutVue,
-        children: []
+        children: [
+            {
+                path: '',
+                name: 'outliers',
+                component: OutliersIndexVue
+            },
+            {
+                path: '/gigantes-de-mx',
+                name: 'gigantsMX',
+                component: GigantsView
+            },
+        ]
     },
     {
         path: '/author',

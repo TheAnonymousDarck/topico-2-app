@@ -58,3 +58,7 @@ Fuera de Serie
 
 Conclusiones:
 El libro cierra reforzando la idea central de que el éxito es más complejo de lo que parece y que debemos considerar una amplia gama de factores para entenderlo completamente.
+
+## Puntos para la tabla
+
+- Esfuerzo
