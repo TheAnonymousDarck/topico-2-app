@@ -17,6 +17,8 @@ import IndexToolsViewVue from "@/views/FirstPartial/ToolsDesitions/IndexToolsVie
 import TestToolsViewVue from "@/views/FirstPartial/ToolsDesitions/TestToolsView.vue";
 import OutliersIndexVue from "@/views/SecondPartial/FueraSerie/OutliersIndex.vue";
 import GigantsView from "@/views/SecondPartial/GigantsMX/GigantsView.vue";
+import IndexThView from '@/views/ThirdPartial/IndexThView.vue'
+import ArqView from '@/views/ThirdPartial/arquetipos/ArqView.vue'
 
 export const routes: RouteRecordRaw[] = [
     {
@@ -112,6 +114,23 @@ export const routes: RouteRecordRaw[] = [
                 path: '/gigantes-de-mx',
                 name: 'gigantsMX',
                 component: GigantsView
+            },
+        ]
+    },
+    {
+        path: '/arq-partial-index',
+        name: 'third-partial-index',
+        component: IndexThView,
+    },
+    {
+        path: '/arq-partial',
+        name: 'third-partial',
+        component: GuestLayoutVue,
+        children: [
+            {
+                path: '',
+                name: 'arquetipos',
+                component: ArqView
             },
         ]
     },

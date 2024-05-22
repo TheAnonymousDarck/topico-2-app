@@ -32,6 +32,10 @@
                 class="backdrop-blur-sm transition duration-500 ease-in-out bg-indigo-500 border border-[#E2E8F0] translate-y-1 text-white hover:bg-indigo-200 text-lg font-semibold py-3 px-6 rounded-3xl inline-flex items-center">
                 <span> Segundo parcial</span>
               </RouterLink>
+              <RouterLink :to="{ name: 'third-partial-index' }" disabled
+                          class="backdrop-blur-sm transition duration-500 ease-in-out bg-indigo-500 border border-[#E2E8F0] translate-y-1 text-white hover:bg-indigo-200 text-lg font-semibold py-3 px-6 rounded-3xl inline-flex items-center">
+                <span> Tercer parcial</span>
+              </RouterLink>
               <RouterLink :to="{ name: 'author' }"
                 class="ml-2 backdrop-blur-sm transition duration-500 ease-in-out bg-indigo-500 border border-[#E2E8F0] translate-y-1 text-white hover:bg-indigo-200 text-lg font-semibold py-3 px-6 rounded-3xl inline-flex items-center">
                 <span> Autor </span>

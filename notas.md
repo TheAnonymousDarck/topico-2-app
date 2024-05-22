@@ -46,7 +46,7 @@ LEER PRIMEROS 3 CAPITULOS
 
 Fuera de Serie
 
-## Epilogo Notas fuera de serie
+## Resumen fuera de serie
 
 - Se enfatiza la importancia del contexto y las oportunidades en el éxito individual
 
@@ -62,3 +62,10 @@ El libro cierra reforzando la idea central de que el éxito es más complejo de 
 ## Puntos para la tabla
 
 - Esfuerzo
+
+
+### Teorema de habilidades
+
+
+### Habilidades 
+
