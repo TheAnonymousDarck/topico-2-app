@@ -1,33 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import CardInfography from '@/components/Infografias/CardInfography.vue'
-// import { VuePDF, usePDF } from '@tato30/vue-pdf'
-// import type { ProgressPDF } from '@/interfaces/ProgressPDF';
-
-// function onProgress({ loaded, total }: ProgressPDF): void {
-//   const percentage: number = (loaded / total) * 100;
-//   console.log(`${percentage}% Loaded`);
-// }
-
-// function onError(reason: string): void {
-//   console.error(`PDF loading error: ${reason}`)
-// }
-
-// const { pdf, pages, info } = usePDF(`'/src/assets/pdf/Decalogo.pdf`, {
-//   onProgress,
-//   onError
-// });
 
 const showCards = ref<boolean>(true);
-
-function change() {
-  return showCards.value = !showCards.value;
-}
-
-function chosePDF() {
-  return showCards.value = !showCards.value;
-}
-
 const linksI = [
   'https://www.canva.com/design/DAF79_bgvfQ/yIJ15cM5djKIV80uKMNETg/edit?utm_content=DAF79_bgvfQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
   'https://www.canva.com/design/DAF8B4fC_LM/8uUparWdpZ_VMGQZ1VYyQA/edit?utm_content=DAF8B4fC_LM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',

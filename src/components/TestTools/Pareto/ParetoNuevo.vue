@@ -1,7 +1,6 @@
-<script>
+<script lang="ts">
 import { FwbInput } from 'flowbite-vue'
-import { ref } from 'vue'
-import { useParetoStore } from '@/stores/paretoStore.ts'
+import { useParetoStore } from '@/stores/paretoStore'
 
 export default {
   components: { FwbInput },
@@ -71,7 +70,7 @@ export default {
       chart.data[1].set("axisYType", "secondary", false);
       chart.axisY[0].set("maximum", Math.round(yTotal / 100) * 100);
     },
-    chartInstance(chart) {
+    chartInstance(chart: any) {
       this.chart = chart;
       this.createPareto();
     }

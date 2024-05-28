@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import { FwbButton, FwbModal } from 'flowbite-vue';
 
 
@@ -9,15 +8,10 @@ interface ModalContent {
 }
 
 defineProps<{
-    modalContent: {
-        type: ModalContent,
-        required: true
-    }
+    modalContent: ModalContent,
 }>();
 
-defineEmits(
-    () => 'closeModal'
-);
+defineEmits( () => 'closeModal');
 </script>
 <template>
     <FwbModal @close="closeModal">

@@ -19,12 +19,20 @@ import OutliersIndexVue from "@/views/SecondPartial/FueraSerie/OutliersIndex.vue
 import GigantsView from "@/views/SecondPartial/GigantsMX/GigantsView.vue";
 import IndexThView from '@/views/ThirdPartial/IndexThView.vue'
 import ArqView from '@/views/ThirdPartial/arquetipos/ArqView.vue'
+import NegotiationView from '@/views/ThirdPartial/nego/NegotiationView.vue'
+import QDisView from '@/views/ThirdPartial/quintaDisc/QDisView.vue'
+import SupCompView from '@/views/ThirdPartial/superCom/SupCompView.vue'
 
 export const routes: RouteRecordRaw[] = [
     {
         path: '/',
         name: 'home',
         component: HomeView
+    },
+    {
+        path: '/author',
+        name: 'author',
+        component: AuthorViewVue
     },
     {
         path: '/first-partial-index',
@@ -132,11 +140,22 @@ export const routes: RouteRecordRaw[] = [
                 name: 'arquetipos',
                 component: ArqView
             },
+            {
+                path: '/nego',
+                name: 'nego',
+                component: NegotiationView
+            },
+            {
+                path: '/quinta-disciplina',
+                name: 'qdisc',
+                component: QDisView
+            },
+            {
+                path: '/super-competencias',
+                name: 'super-competencias',
+                component: SupCompView
+            },
         ]
     },
-    {
-        path: '/author',
-        name: 'author',
-        component: AuthorViewVue
-    },
+
 ];

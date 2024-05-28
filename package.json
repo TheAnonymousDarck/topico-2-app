@@ -31,7 +31,6 @@
     "flowbite": "^2.3.0",
     "flowbite-vue": "^0.1.4",
     "highlight.js": "^11.9.0",
-    "openai": "^4.43.0",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
     "postcss": "^8.4.38",
@@ -49,17 +48,17 @@
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.5.1",
-    "cypress": "^13.9.0",
-    "eslint": "^9.2.0",
+    "cypress": "^13.10.0",
+    "eslint": "^8.49.0",
     "eslint-plugin-cypress": "^3.2.0",
     "eslint-plugin-vue": "^9.26.0",
     "jsdom": "^24.0.0",
-    "npm-run-all2": "^6.1.2",
+    "npm-run-all2": "^6.2.0",
     "prettier": "^3.2.5",
     "start-server-and-test": "^2.0.3",
     "typescript": "~5.4.5",
     "vite": "^5.2.11",
     "vitest": "^1.6.0",
-    "vue-tsc": "^2.0.16"
+    "vue-tsc": "^2.0.19"
   }
 }

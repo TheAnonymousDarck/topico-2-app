@@ -2,14 +2,14 @@
 import { ref } from 'vue';
 import { FwbButton, FwbModal } from 'flowbite-vue';
 
+
+interface content {
+  title: string;
+  text: string;
+}
 interface Content {
     part: string;
-    content: [
-        {
-            title: string;
-            text: string;
-        }
-    ];
+    content: content[];
 }
 const isShowModal = ref(false)
 const closeModal = () => isShowModal.value = !isShowModal.value;

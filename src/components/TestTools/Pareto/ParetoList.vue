@@ -33,13 +33,14 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { FwbInput } from 'flowbite-vue'
+// @ts-ignore
 import CanvasJSChart from '@canvasjs/vue-charts';
 
-const qy1 = ref(0);
-const qy2 = ref(0);
-const qy3 = ref(0);
-const qy4 = ref(0);
-const qy5 = ref(0);
+// const qy1 = ref(0);
+// const qy2 = ref(0);
+// const qy3 = ref(0);
+// const qy4 = ref(0);
+// const qy5 = ref(0);
 
 let chartU = null;
 const options = {

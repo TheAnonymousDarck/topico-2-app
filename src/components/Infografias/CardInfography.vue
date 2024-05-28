@@ -45,7 +45,7 @@ function downloadPDF(pdfName: string) {
 
 function viewPDF(pdfName: string) {
     console.log('ver ', pdfName);
-    router.push();
+    router.push('/infografias/' + pdfName);
 
 }
 </script>

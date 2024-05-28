@@ -4,9 +4,10 @@ import { FwbButton, FwbTextarea, FwbModal } from 'flowbite-vue'
 import type { Hat } from '@/interfaces/Index'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { useSixHatsStore } from '@/stores/sixHatsStore'
+import type { ButtonVariant } from 'flowbite-vue/components/FwbButton/types'
 
 interface dataColorContent{
-  color: string;
+  color: ButtonVariant | string;
   content: string;
 }
 const props = defineProps<{
